@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드 레이아웃 반응형 웹</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        article {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        aside {
+            background-color: #e0e0e0;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 480px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            
+        }
+        @media (min-width: 768px) {
+            main {
+                grid-template-columns: 1fr 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>그리드 레이아웃 반응형 웹</h1>
+</header>
+
+<main>
+    <article>
+        <h2>메인 콘텐츠</h2>
+        <p>이것은 메인 콘텐츠 영역입니다.</p>
+    </article>
+
+    <aside>
+        <h3>사이드 바</h3>
+        <p>이것은 사이드 바 영역입니다.</p>
+    </aside>
+</main>
+
+<footer>
+    <p>&copy; 2026 그리드 레이아웃 반응형 웹</p>
+</footer>
+
+</body>
+</html>

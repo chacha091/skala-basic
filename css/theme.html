@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테마 전환 예제</title>
+    <style>
+    :root {
+        --bg-color: #ffffff;
+        --text-color: #000000;
+        --border-color: #cccccc;
+    }
+
+    /* 라디오 버튼 상태에 따라 CSS 변수 변경 */
+    body:has(input[name="theme"][value="dark"]:checked) {
+        --bg-color: #1e1e1e;
+        --text-color: #ffffff;
+        --border-color: #444444;
+    }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: Arial, sans-serif;
+        transition: background-color 0.3s, color 0.3s;
+        padding: 20px;
+    }
+
+    .theme-container {
+        max-width: 600px;
+        margin: 0 auto;
+        border: 1px solid var(--border-color);
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .radio-group {
+        margin: 20px 0;
+    }
+
+    label {
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    input[type="radio"] {
+        margin-right: 8px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<div class="theme-container">
+    <h1>테마 전환</h1>
+    <div class="radio-group">
+        <label>
+            <input type="radio" name="theme" value="light" checked>
+            화이트 테마
+        </label>
+        <label>
+            <input type="radio" name="theme" value="dark">
+            다크 테마
+        </label>
+    </div>
+    <p>라디오 버튼을 선택하여 테마를 변경하세요.</p>
+</body>
+</html>
+

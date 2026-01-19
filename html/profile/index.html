@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>나의 프로필 페이지</title>
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2f7, #f9fbfd);
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+    color: #333;
+    line-height: 1.7;
+}
+
+header {
+    background: linear-gradient(135deg, #65d4c9, #59adba);
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: -0.5px;
+}
+
+section {
+    background-color: #ffffff;
+    margin: 25px 0;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #2c3e50;
+    border-left: 5px solid #56d0ce;
+    padding-left: 12px;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    width: 150px;
+    border-radius: 20%;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 8px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #73dede;
+    font-size: 1.2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+th, td {
+    padding: 14px;
+    text-align: center;
+}
+
+th {
+    background-color: #f0f4f8;
+    font-weight: 600;
+    color: #345e5c;
+}
+
+td {
+    background-color: #ffffff;
+}
+
+tr:nth-child(even) td {
+    background-color: #f9fbfd;
+}
+
+a {
+    display: inline-block;
+    margin: 6px 0;
+    color: #60c8ba;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #2c3e50;
+    text-decoration: underline;
+}
+
+audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+hr {
+    display: none;
+}
+
+footer {
+    margin-top: 40px;
+    background: linear-gradient(135deg, #72ced6, #58bfc1);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 14px;
+    font-size: 0.95rem;
+}
+
+    </style>
+
+</head>
+<body>
+
+<header>
+    <h1>프로필 페이지</h1>
+</header>
+
+<section>
+    <h2>BGM</h2>
+    <audio controls>
+        <source src="media\new-dream-background-music-465079.mp3" type="audio/mpeg">
+    </audio>
+</section>
+
+<hr>
+
+<section>
+    <article>
+        <h2>자기소개</h2>
+        <p>
+            안녕하세요. <br> 저는 차현주입니다.
+            컴퓨터공학과 경영학부 전공으로 
+            AI를 활용한 비즈니스 문제 해결에 기여하고 싶습니다.
+            
+        </p>
+    </article>
+</section>
+
+<hr>
+
+<section>
+    <h2>프로필 이미지</h2>
+    <img src="media\차현주.jpg" alt="프로필 사진" width="200">
+</section>
+
+<hr>
+
+<section>
+    <h2>관심사</h2>
+    <ul>
+        <li>🦁삼성 라이온즈⚾️</li>
+        <li>⚫바둑⚪</li>
+    </ul>
+</section>
+
+<hr>
+
+<section>
+    <h2>기술 스택</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>구분</th>
+                <th>기술</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Language</td>
+                <td>TypeScript, C, Java</td>
+            </tr>
+            <tr>
+                <td>Frontend</td>
+                <td>React</td>
+            </tr>
+            <tr>
+                <td>Backend</td>
+                <td>FastAPI</td>
+            </tr>
+            <tr>
+                <td>Database</td>
+                <td>MySQL</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+<hr>
+
+<section>
+    <h2>즐겨찾는 사이트</h2>
+    <p>
+        <a href="https://github.com/chacha091" target="_blank">GITHUB</a><br>
+        <a href="https://www.koreabaseball.com/Record/Player/HitterBasic/Basic1.aspx?sort=HRA_RT" target="_blank">KBO STATS</a><br>
+        <a href="https://www.tygem.com/" target="_blank">TYGEM</a>
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 차현주.</p>
+</footer>
+
+</body>
+</html>

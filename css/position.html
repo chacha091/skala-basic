@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위치 속성 예제</title>    
+    <style>
+        body {
+            height: 2000px; /* 스크롤 테스트를 위해 높이 설정 */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        div {
+            padding: 10px;
+            margin: 10px;
+        }
+        
+        .static {
+            position: static;
+            background-color: lightblue;
+            padding: 20px;
+            margin: 10px;
+        }
+        
+        .relative {
+            position: relative;
+            background-color: lightgreen;
+            top: 30px;
+            left: 50px;
+            padding: 20px;
+            margin: 10px;
+        }
+        
+        .absolute {
+            position: absolute;
+            background-color: lightcoral;
+            top: 100px;
+            right: 50px;
+            padding: 20px;
+        }
+        
+        .fixed {
+            position: fixed;
+            background-color: lightgoldenrodyellow;
+            top: 20px;
+            right: 30px;
+            padding: 20px;
+            z-index: 100; /* 팝업처럼 항상 위에 보이도록 */
+        }
+        
+        .sticky {
+            position: sticky;
+            background-color: lightpink;
+            top: 0;
+            padding: 20px;
+            margin: 10px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="static">Static Position</div>
+    <div class="relative">Relative Position</div>
+    <div class="absolute">Absolute Position</div>
+    <div class="fixed">Fixed Position</div>
+    <div class="sticky">Sticky Position</div>
+    <br>
+    <P>스크롤을 내려서 sticky position을 확인하세요.</P>
+</body>
+</html>

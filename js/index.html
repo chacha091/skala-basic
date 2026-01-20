@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 예제</title>
+</head>
+<body>
+    <h1>JS 예제</h1>
+    <p>이 페이지는 JavaScript 예제를 포함하고 있습니다.</p>
+    태그 없이 작성한 문장
+    <script>
+        console.log("Hello, World!");
+        console.error("This is an error message.");
+        document.write("<p>This is written using document.write()</p>");
+        document.write("아무 <br>문장");
+        console.log("아무 '문장'\n이나 작성");
+        //alert("This is an alert message.");
+        //prompt("This is a prompt message. Please enter something:");
+        //location.href = "https://www.google.com";
+        let x;
+        let y = null;
+        console.log(x); // undefined
+        console.log(y); // null
+        console.log(x == y);  // true  약한 비교
+        console.log(x === y); // false  엄격한 비교(타입도 체크)
+        console.log(x != y);  // false
+        console.log(x !== y); // true
+
+        let w = 123
+        let z = '123';
+        console.log(w == z);  // true
+        console.log(w === z); // false
+    </script> 
+</body>
+</html>

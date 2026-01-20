@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 객체</title>
+</head>
+<body>
+    <script>
+        const person = {
+            name: "홍길동",
+            age: 25,
+            skills: ["검술", "월담", "도술"],
+            address: {
+                city: "한양",
+                zipCode: "03068"
+            }
+        };
+
+        // 스프레드 연산자: 얕은 복사 - 계위가 1인 애들만 복사, 배열은 주소만
+        // const alice ={...person}; 
+        // alice.name = "앨리스";
+        // alice.age = 15;
+
+        // alice.address.city = "뉴욕";
+        // alice.skills.push("마법")
+
+        // console.log(person, alice)
+        
+
+        // structuredClone: 깊은 복사 - 중첩된 객체까지 모두 복사
+        const alice = structuredClone(person);
+        alice.name = "앨리스";
+        alice.age = 15;
+        alice.address.city = "뉴욕";
+        alice.skills.push("마법");
+
+        console.log(person, alice);
+
+        // const poor = {};
+        // poor.name = "김철수";
+        // poor.age = 30;
+        // console.log(poor);
+
+        // console.log(person);
+        
+        // const key = "skills";
+        // console.log(`${key}: ${person[key]}`);
+
+        // const message = JSON.stringify(person);
+        // console.log(message, person);
+        
+        // delete person.skills;
+
+        // console.log(message, person);
+
+        // const obj = JSON.parse(message);
+        // console.log(obj); // 함수는 포함되지 않음
+    </script>
+</body>
+</html>

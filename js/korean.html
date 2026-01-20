@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한글 판별</title>
+</head>
+<body>
+    <h2>한글 판별 예제</h2>
+
+    <script>
+        const hasKoreanName = (name) => {
+            const koreanRegex = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+            return koreanRegex.test(name)
+        };
+
+        const message = prompt("문장을 입력하세요:");
+
+        if(message !== null){
+            if(hasKoreanName(message)){
+                document.write(`입력하신 문자: [${message}]에는 한글이 포함되어 있습니다.`);
+            } else {
+                document.write(`입력하신 문자: [${message}]에는 한글이 포함되어 있지 않습니다.`);
+            }
+        }
+    </script>
+</body>
+</html>

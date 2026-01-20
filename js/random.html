@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>6자리 난수 생성</title>
+</head>
+<body>
+    <h1>6자리 난수 생성</h1>
+    <button onclick="generateSixDigitCode()">난수 생성</button>
+    <p id="result"></p>
+    <button onclick="generateUUID()">UUID 생성</button>
+    <p id="uuidResult"></p>
+
+    <script>
+        // function generateRandomNumber() {
+        //     const randomNum = Math.floor(Math.random() * 900000) + 100000;
+        //     document.getElementById('result').textContent = '생성된 난수: ' + randomNum;
+        // }
+
+        function generateSixDigitCode() {
+            // 0 이상 1,000,000 미만의 난수 생성
+            const num = Math.floor(Math.random() * 1000000);
+
+            // 6자리 문자열로 만들고, 빈 곳은 앞부터 '0'으로 채움
+            const sixDigitCode = String(num).padStart(6, '0');
+            document.getElementById('result').textContent = '생성된 난수: ' + sixDigitCode;
+        };
+
+        function generateUUID() {
+            const uuid = crypto.randomUUID();
+            document.getElementById('uuidResult').textContent = '생성된 UUID: ' + uuid;
+        }
+    </script>
+</body>
+</html>

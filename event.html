@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 등록 방식</title>
+</head>
+<body>
+    <h1>이벤트 등록 방식 예제</h1>
+
+    <div id="eventSection"
+         style="width: 300px; height: 200px; border: 1px solid black; margin: 20px; padding: 10px;">
+        <button id="eventBtn">클릭해보세요!</button>
+        <p id="eventOutput">출력될 내용</p>
+    </div>
+
+    <script>
+        const eventBtn = document.getElementById('eventBtn');
+        const eventOutput = document.getElementById('eventOutput');
+        const eventSection = document.getElementById('eventSection');
+
+        // 공통 처리 함수
+        function handleClick() {
+            eventOutput.textContent = '버튼 로직이 실행되었습니다!';
+        }
+
+        // 자식 클릭
+        eventBtn.addEventListener('click', handleClick);
+
+        // 부모 클릭 → 자식 클릭과 동일한 처리
+        eventSection.addEventListener('click', (e) => {
+            if (e.target !== eventBtn) {
+                eventBtn.click(); // 자식 이벤트 강제 실행
+            }
+        });
+    </script>
+</body>
+</html>

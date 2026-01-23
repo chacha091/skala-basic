@@ -31,3 +31,6 @@ npm-debug.log*
 .cache/
 
 차현주.jpg
+
+.venv/
+venv
